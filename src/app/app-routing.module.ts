@@ -4,7 +4,6 @@ import { ListaComponent } from './imagen/lista.component';
 import { NuevaComponent } from './imagen/nueva.component';
 import { DetalleComponent } from './imagen/detalle.component';
 
-
 const routes: Routes = [
   {path: '', component: ListaComponent},
   {path: 'nueva', component: NuevaComponent},

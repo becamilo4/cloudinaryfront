@@ -8,6 +8,9 @@ import { NuevaComponent } from './imagen/nueva.component';
 import { DetalleComponent } from './imagen/detalle.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,9 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModalModule
+    NgbModalModule,
+    HttpClientModule,
+    FormsModule
   ],
   entryComponents: [DetalleComponent],
   providers: [],
