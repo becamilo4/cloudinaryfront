@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+import { ImagenService } from '../services/imagen.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-nueva',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevaComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private imagenService: ImagenService,
+    private router: Router,
+    private spinner: NgxSpinnerService
+  ) { }
 
   ngOnInit(): void {
   }
