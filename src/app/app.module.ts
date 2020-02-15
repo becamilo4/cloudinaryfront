@@ -11,6 +11,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NgbModalModule,
     HttpClientModule,
     FormsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   entryComponents: [DetalleComponent],
   providers: [],
