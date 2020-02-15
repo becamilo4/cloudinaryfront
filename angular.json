@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "cloudinaryfront": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cloudinaryfront"
+    }
+  },
+  "defaultProject": "cloudinaryfront",
+  "cli": {
+    "analytics": "80089773-cc81-4501-8331-d17fc276db79"
+  }
 }
