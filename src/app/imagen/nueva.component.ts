@@ -33,7 +33,7 @@ export class NuevaComponent implements OnInit {
       },
       err=>{
         this.spinner.hide();
-        alert(err.console.console.error.mensaje)
+        alert(err.error.mensaje)
         this.reset();
       }
     );
