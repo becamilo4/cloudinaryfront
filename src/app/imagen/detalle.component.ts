@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { ImagenService } from '../services/imagen.service';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { Imagen } from '../models/imagen';
 
 @Component({
   selector: 'app-detalle',
@@ -7,9 +11,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleComponent implements OnInit {
 
-  constructor() { }
+  @Input() index;
 
-  ngOnInit(): void {
+  imagenes: Imagen[] = [];
+
+  public config: SwiperConfigInterface = {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    keyboard: true,
+    mousewheel: true,
+    scrollbar: false,
+    navigation: true,
+    pagination: false
+  };
+
+  constructor(
+    public activeModal: NgbActiveModal,
+    private imagenService: ImagenService
+  ) { }
+
+  ngOnInit() {
+    this.config.initialSlide = this.index;
+    this.imagenService.list().subscribe(
+      data => {
+        this.imagenes = data;
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
 }
