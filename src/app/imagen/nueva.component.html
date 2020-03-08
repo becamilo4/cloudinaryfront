@@ -7,6 +7,14 @@
         <input type="file" class="custom-file-input" id="imagen" #imagenInputFile
         (change)="onFileChange($event)" accept="image/jpeg">
         <label class="custom-file-label" for="imagen">Elige imagen</label>
+        <label for="description">Descripción:</label>
+        <p></p>
+        <textarea [(ngModel)]="description" rows="10" cols="50" name="description"></textarea>
+        <p></p>
+        <label for="prize">Precio:</label>
+        <input [(ngModel)]="prize" type="number" name="prize">
+        <label for="peso">Peso:</label>
+        <input [(ngModel)]="peso" type="number" name="peso">
     </div>
     <div *ngIf="imagen" class="mt-5">
         <h5>Vista previa:</h5>

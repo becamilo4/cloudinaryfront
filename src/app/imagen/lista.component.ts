@@ -13,6 +13,7 @@ import { DetalleComponent } from './detalle.component';
 export class ListaComponent implements OnInit {
 
   imagenes: Imagen[] = [];
+  coin: number;
 
   constructor(
     private imagenService: ImagenService,
@@ -21,7 +22,10 @@ export class ListaComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-   this.cargarImagenes();
+    this.cargarImagenes();
+    this.imagenService.coinValue().subscribe(data => {
+     this.coin = data.USD_COP;
+    });
   }
 
   cargarImagenes(): void {

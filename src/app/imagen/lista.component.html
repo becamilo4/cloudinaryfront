@@ -8,6 +8,10 @@
             <h3 class="card-header">{{imagen.name}}</h3>
             <div class="card-body">
               <h5 class="card-title"><b>ID: </b>{{imagen.imagenId}}</h5>
+              <h5 class="card-title"><b>Peso: </b>{{imagen.peso}}</h5>
+              <h5 class="card-title"><b>Precio: </b>{{imagen.precio}} USD</h5>
+              <h5 class="card-title"><b>Precio: </b>{{imagen.precio*coin}} COP</h5>
+              <h5 class="card-title"><b>Descripción: </b>{{imagen.description}}</h5>
             </div>
             <div class="card-body text-center">
             <img style="height: 200px; width: 100%; display: block;" src="{{imagen.imagenUrl}}" alt="Card image">

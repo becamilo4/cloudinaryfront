@@ -14,11 +14,14 @@ export class NuevaComponent implements OnInit {
 
   imagen: File;
   imagenMin: File;
+  prize: number;
+  peso: number;
+  description: String;
 
   constructor(
     private imagenService: ImagenService,
     private router: Router,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService 
   ) { }
 
   ngOnInit(): void {
@@ -26,7 +29,7 @@ export class NuevaComponent implements OnInit {
 
   onUpload(): void{
     this.spinner.show();
-    this.imagenService.upload(this.imagen).subscribe(
+    this.imagenService.upload(this.imagen, this.prize, this.peso, this.description).subscribe(
       data =>{
         this.spinner.hide();
         this.router.navigate(['/']);

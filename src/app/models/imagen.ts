@@ -3,4 +3,6 @@ export class Imagen {
     name: string;
     imagenUrl: string;
     imagenId: string;
+    precio: number;
+    description: string;
 }
