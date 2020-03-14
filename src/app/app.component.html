@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" *ngIf="hide">
+  <div class="container" id="galeria">
     <a class="navbar-brand" href="#">Cloudinary</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -18,6 +18,14 @@
     </div>
   </div>
 </nav>
-<div class="container">
+<div class="container" *ngIf="hide">
   <router-outlet></router-outlet>
+</div>
+<div class="mx-auto" style="width: 270px;" *ngIf="!hide">
+    <h1>Inicio de sesion</h1>
+    <h5>Correo</h5>
+    <input type="email" [(ngModel)]="email">
+    <h5>Contraseña</h5>
+    <input type="password" [(ngModel)]="pass">
+    <br><button (click)="submit()">Ingresar</button>
 </div>

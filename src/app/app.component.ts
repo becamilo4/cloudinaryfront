@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cloudinaryfront';
+  email: String;
+  pass: String;
+  hide=false;
+
+  submit(): void{
+    if(this.email=="camilo@gmail.com" && this.pass=="camilo"){
+      this.hide=true;
+    }
+  }
 }
